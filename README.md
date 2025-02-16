@@ -7,7 +7,7 @@ This password is one of the 2 private keys needed for the wallet, the other can 
 
 After a lot of digging I found a few clues about the password - but sadly those hints are cryptic themselves , using probably rather simple cyphers I came up with myself.
 
-The account was created on april 13th but the messages containing the password might be from before.
+The account was created on April 13th but the messages containing the password might be from before.
 
 The password probably consists of 3 parts :
 - a part consisting of 3 letter abbreviations
