@@ -1,4 +1,4 @@
-In the Year 2015 I create an online multi-sig wallet containing around 200.000 Dogecoin (worth ~25€ at the time),
+In the Year 2015 I created an online multi-sig wallet containing around 200.000 Dogecoin (worth ~25€ at the time),
 I managed successfully to forget about it til recently - as actually planned, as I wanted to prevent to sell too early 
 Sadly the way I remembered was the information that the service is being shutdown and there is only very low time left til they go offline.
 
