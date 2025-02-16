@@ -1,0 +1,110 @@
+Dienstag, 24. März 2015 10:16:05;Initial Commit with some basic stuff running already.
+Dienstag, 24. März 2015 13:57:26;added Extension class to get a list of TileCoords for different TilePatterns. Added some random init values for testing.
+Mittwoch, 25. März 2015 15:19:12;added Bounds checks, level initialisation from image, added constructor for TileInfo, fixed bug by swapping x,z in loop
+Donnerstag, 2. April 2015 14:17:32;added non power of 2 texture for performance testing
+Donnerstag, 2. April 2015 14:17:32;added hexagon mesh for testing, working on creating the obstacle image
+Samstag, 4. April 2015 09:48:01;simple player and AI stuff, navmesh
+Samstag, 4. April 2015 11:09:09;added Entity Stats as general unit info component
+Dienstag, 7. April 2015 15:32:07;creating instance of map tile texture so it does use this copy instead of  the saved file which persisted.
+Mittwoch, 8. April 2015 16:41:34;worked on Unit Spawning, added navmesh tool which also takes disabled renderers into account.
+Mittwoch, 8. April 2015 22:21:49;started working on weapon system.
+Donnerstag, 9. April 2015 10:41:48;added 5th color and influence increases on tiles now and if invader controlle for too long it becomes infested and uncapturable.
+Donnerstag, 9. April 2015 14:47:37;HitScanWeapon functional, Unit destruction working (including unregistering tile effectors)
+Donnerstag, 9. April 2015 18:37:38;added range indicator for debugging, now y = 0.5f is assumed as starting point for all shots from player as well as target point.
+Donnerstag, 9. April 2015 22:47:04;started work on projectile weapons
+Freitag, 10. April 2015 16:48:59;continued work on Projectiles and Unit destruction. Reflection and Piercing working now.
+Samstag, 11. April 2015 11:32:28;fixed bug with non piercing but reflecting projectile vanishing on obstacles. added secondary weapon so hitscan and projectile weapons can be tested at the same time.
+Samstag, 11. April 2015 14:34:59;started work on Ballistic Projectile.
+Sonntag, 12. April 2015 18:17:03;cleaned up code a bit.
+Sonntag, 12. April 2015 18:26:28;changed to asset serialization mode being "Force Text"
+Sonntag, 12. April 2015 19:13:01;some more code cleanup/ variable renaming
+Montag, 13. April 2015 10:57:40;started on decoupling tilemap manager from tilemap creation (visual representation)
+Montag, 13. April 2015 11:36:19;more work on decoupling
+Montag, 13. April 2015 16:39:03;further decoupling, changed from interface to abstract class as Unity Inspector does not show interfaces...
+same commit, 2nd line);fixed performance bug where tilemap was updated way too often instead of all at once.
+Montag, 13. April 2015 19:20:48;decoupled tilemap visuals from tilemap manager.
+Dienstag, 14. April 2015 15:31:23;Added option for tile effectors to only trigger on death.
+same commit, 2nd line);Hitscan weapon debug line now properly shows whole range instead of mouse position
+Dienstag, 14. April 2015 17:36:19;added a 1 frame delay between DestructionImmediate and actual Destruction to avoid script execution order problems.
+Donnerstag, 16. April 2015 17:00:51;Weapons now can shoot multple rays/projectiles at once. Positional and Angular Offset defined for each Ray/Projectile in the weapon.
+Donnerstag, 16. April 2015 21:52:19;refactored one time tile effectors and tilemapmanager to avoid frame delay and trouble. Way easier solution now.
+same commit, 2nd line);Weapons with multiple rays/projectiles dont use more than remaining in shared clip now.
+Freitag, 17. April 2015 15:48:07;changed way hitscanning for targets and obstacles works. Now uses 2 rays. Makes things better.
+Samstag, 18. April 2015 18:06:15;HitScans are a static class now, as lots of different systems are going to use hitscans. added reflection to hitscan weapons using recursion. Still needs a max amount of reflections. probably best to replace  isReflecting with an integer and decrement it till it is not reflecting anymore.
+Montag, 20. April 2015 10:45:55;started working on changing how weapons work once again. should be even better and more flexible then.
+Montag, 20. April 2015 19:02:42;emergency commit, laptop might explode soon.
+Mittwoch, 22. April 2015 11:44:00;more work on how weapon effects work, piercing now works yeah!
+Mittwoch, 22. April 2015 13:51:53;added splash Damage Effect.
+Mittwoch, 22. April 2015 14:47:07;added reflecting projectile. also changed system so effects need to explicitly have the WhenNothingHit Layer when they shall be triggered when nothing is hit.
+Mittwoch, 22. April 2015 15:35:40;added first Trajectile Modifier.
+Donnerstag, 23. April 2015 11:08:08;distinction between triggering and affecting layers for splash effects.
+same commit, 2nd line);started work on creating an abstract Trajectile Class which is inherited by Beam and Projectile.
+Donnerstag, 23. April 2015 12:51:06;refactored weapon system so that trajectiles have all the data which needs to be provided to effects.
+Freitag, 24. April 2015 00:00:34;started working on implementing Projectile Trajectiles :D
+Freitag, 24. April 2015 15:45:50;removed hitscan and projectileweapon as weapon just contains differrent trajectiles now so we dont need to distinguish on that level.
+Freitag, 24. April 2015 16:18:37;Effects not have different Methods for Beams and Projectiles - handling them equally does not work so well.
+Samstag, 25. April 2015 11:22:26;cleaned up folder structure a bit,
+same commit, 2nd line);added a ScanSphere Hitscan option which uses a sphere sweep so beams can have a thickness.
+same commit, 3rd line);Added a Multiply Trajectile Effect Modifier.
+Samstag, 25. April 2015 12:01:06;added option for TrajectileModifierMultiply to either use impact point or pivot of hitObject as origin for new Trajectiles.
+Sonntag, 26. April 2015 10:07:52;Instantiated Beams are now being cleaned up.
+Sonntag, 26. April 2015 18:33:44;added blocking layers to allow splash not penetrating certain obstacles.
+Donnerstag, 7. Mai 2015 20:19:07;beam can now have different drawing methods.
+Samstag, 9. Mai 2015 18:44:39;beam drawing with gameobjects
+Samstag, 9. Mai 2015 20:17:35;some work on splash being blocked by elements in blocking layer.
+Sonntag, 10. Mai 2015 21:20:02;started work on cone damage (spherescan then checking if angle is right.
+Montag, 11. Mai 2015 15:23:50;added cone damage, need to rework splash and cone dmg from effects into trajectile types as that makes more sense.
+Montag, 11. Mai 2015 19:21:11;Cone Damage now works. Refactored into own Trajectile Type instead of being an effect.
+Montag, 11. Mai 2015 21:54:46;added cone transmittter prefab.
+Dienstag, 12. Mai 2015 10:42:44;refactored different Transmitter shapes to all work like Trajectiles before.
+Dienstag, 12. Mai 2015 13:11:03;added scanring.
+Dienstag, 12. Mai 2015 16:15:38;circlescan now sends an additional ray to each thing it collided with which isnt blocked to measure distance and impact point. Ring Transmitter now works.
+Dienstag, 12. Mai 2015 18:53:40;added free particle assets to test around, started working on circle particle drawer.
+Mittwoch, 13. Mai 2015 08:37:45;particle experiments
+Mittwoch, 13. Mai 2015 11:53:04;circleDrawer using shortlived gameobject added.
+Mittwoch, 13. Mai 2015 12:50:06;started work on cone and ring drawing
+Mittwoch, 13. Mai 2015 15:57:00;working on cone drawer
+Mittwoch, 13. Mai 2015 22:30:48;instead of a helper class with a rotateOnXZPlane for Vector3s it is now an extension method.
+Donnerstag, 14. Mai 2015 23:04:34;cone drawing now works!
+Freitag, 15. Mai 2015 18:17:54;ring drawer now works, can also draw ring segments.
+Freitag, 15. Mai 2015 19:49:56;cone provided wrongfully only angle from center instead of total angle to conedrawer. Should eventually all be be more consistent :D
+Freitag, 15. Mai 2015 22:40:36;added a beam which has a splash effect at the end. right now when reflecting it triggers every time. Needs fix.
+Samstag, 16. Mai 2015 08:44:48;reflect and piercing now have an option to trigger all untargetted effects if remaining reflects or piercings are 0.
+Samstag, 16. Mai 2015 08:55:14;bugfix: range of splash transsmitters now longer overridden by splasheffect range. removed that field from splashEffect, merely acts as container to keep transmitter now.
+Samstag, 16. Mai 2015 17:37:37;started work on bounce effect.
+Samstag, 16. Mai 2015 20:34:05;more work on bouncing effect  still needs work .
+Samstag, 16. Mai 2015 23:06:48;more work on bouncing
+Sonntag, 17. Mai 2015 21:02:28;units which have no pre-death events (DestructionImmediate) also get destroyed now. Bounce Effect still buggy dont get why.
+Montag, 18. Mai 2015 09:55:26;fixed "=" instead of "==" in remove linq expression, now need to add ignore list for already hit targets for bounce effect.
+Montag, 18. Mai 2015 13:32:11;bounce effect now works :-)
+Dienstag, 19. Mai 2015 18:52:03;projectile piercing and reflect now works properly. Bounce still needs to be done.
+Dienstag, 19. Mai 2015 19:43:20;projectile bouncing now works, excluding already hit ones still missing
+Dienstag, 19. Mai 2015 19:48:03;bouncing projectiles :-)
+Dienstag, 19. Mai 2015 22:29:58;started work on homing bounces.
+Mittwoch, 20. Mai 2015 15:17:13;more work on homing projectiles
+Mittwoch, 20. Mai 2015 17:11:56;turning over time now works :-)
+Donnerstag, 21. Mai 2015 13:37:57;homing now working as planned.
+Donnerstag, 21. Mai 2015 13:43:17;removed isHoming from bounce, projectile now has it directly.
+Donnerstag, 21. Mai 2015 16:11:26;started work on expanding projectiles. needs some work ^^
+Donnerstag, 21. Mai 2015 21:38:31;started with procedural meshes.
+Freitag, 22. Mai 2015 14:42:17;started work on procedural mesh generation
+Freitag, 22. Mai 2015 15:53:38;mesh creation now works without extra logic for last triangle. YAH!
+Freitag, 22. Mai 2015 18:41:39;procedural generation work.
+Freitag, 22. Mai 2015 22:03:16;added a MeshData class which stores partial Meshes which can be then combined in the end
+Freitag, 22. Mai 2015 22:22:03;can now combine multiple meshData to form 1 mesh.
+Samstag, 23. Mai 2015 18:38:50;started work on extrude version with split vertices
+Samstag, 23. Mai 2015 19:39:42;mesh extrusion now works with shared or unique vertices. added a reverseDirection option for face building. need to add for extrusion still.
+Samstag, 23. Mai 2015 20:17:36;noticed we need to check orientation of the Triangles t.t. if leftwinded we need to construct the triangle the other way around.
+Sonntag, 24. Mai 2015 15:33:11;noticed point extrusion (thickness working wrong when direction of polygonzug changes. needs fix, check Skizze3
+Sonntag, 24. Mai 2015 17:50:09;extruding with thickness now works , fixed winding order issues ! :-)
+Sonntag, 24. Mai 2015 19:21:36;minor renaming stuff.
+Montag, 25. Mai 2015 22:29:32;added triangulation API calling triangle program.
+Dienstag, 26. Mai 2015 15:22:53;refactored some stuff and started working on subdividing in between source and target polychains.
+Dienstag, 26. Mai 2015 17:01:56;more work on subdivisions.
+Donnerstag, 28. Mai 2015 16:08:23;added Unique to shared and shared to unique methods.
+Donnerstag, 28. Mai 2015 21:53:26;started working on hexgeneration.
+Montag, 1. Juni 2015 15:24:26;creating HexagonalArea with heightmap (perlin noise for now) works, including UVs. its a bit messy and needs cleanup
+Dienstag, 2. Juni 2015 09:02:00;fixed bug with point extrusion not normalizing the normal so it only worked in special cases, now works properly.
+Dienstag, 2. Juni 2015 13:52:35;some small fixes and experiments
+Mittwoch, 3. Juni 2015 11:13:53;added catmull rom splines
+Donnerstag, 18. Juni 2015 17:45:13;tile capturing now works! some duplicate code which needs cleanup (replacing low-perf version completely with high-perf version.
