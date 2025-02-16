@@ -1,0 +1,14 @@
+user_key": {
+      "public_key": "0243041f1e1839683681cc295adf7eec86cf1eb47225b414e190809d5d57b4acde",
+      "encrypted_passphrase": "uRxQ+dydK+BPfAUdB+R6wGWSR9yzKlimSPH89C9cUWKEeo5NLHkU7FxtsHYjTivucmh7m+RSB4PosTak5SqOM7e/oXsPewX5bUB0sCzFofY8KNj/rp07S91HIZwH230VKBamITaefvWqyegGjJqArq92f/gnY36tisjahho8wfz1MsK1ll5ZY6zPDx/oEc8b",
+      "algorithm": {
+        "pbkdf2_salt": "",
+        "pbkdf2_iterations": 2048,
+        "pbkdf2_hash_function": "SHA256",
+        "pbkdf2_phase1_key_length": 16,
+        "pbkdf2_phase2_key_length": 32,
+        "aes_iv": null,
+        "aes_cipher": "AES-256-ECB",
+        "aes_auth_tag": null,
+        "aes_auth_data": null
+      }
