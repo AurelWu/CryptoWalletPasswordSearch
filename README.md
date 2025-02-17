@@ -22,7 +22,7 @@ The 2-letter syllables part is definitely hidden in the commitmessages.txt
 The 3-letter abbreviations probably too
 
 there might be 1 word interpersed into the password which is out of place, probably between 2 parts
-this word is most likely threepwood or vinividivici (most likely with this spelling mistake, or maybe venivedivici), but vinividivici might also be part of the 2 latter part (maybe in abbreviated form like vinidici)
+this word is most likely threepwood, earhart or vinividivici (most likely with this spelling mistake, or maybe venivedivici), but vinividivici might also be part of the 2 latter part (maybe in abbreviated form like vinidici)
 
 - some (or maybe many) of the commit messages might be just normal commit messages, the one with meaning have been intentionally build in a way that they dont stand out
 - some messages might only contain parts of the message or be practice to get the algorithm down and might contain other onomatopoeic syllables or something which will stand out if correctly decoded but not be part of the password.
